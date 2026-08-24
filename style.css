@@ -5,13 +5,14 @@
 }
 
 :root {
-    --fundo: #070914;
-    --fundo2: #0d1020;
-    --azul: #4f8cff;
-    --lilas: #9b7cff;
-    --branco: #f5f7ff;
-    --cinza: #a8aec3;
-    --borda: rgba(255,255,255,0.09);
+    --fundo: #f6f8fc;
+    --branco: #ffffff;
+    --azul: #2563eb;
+    --azul-escuro: #12306b;
+    --lilas: #8064d9;
+    --texto: #172033;
+    --cinza: #667085;
+    --borda: #e5eaf2;
 }
 
 html {
@@ -21,7 +22,7 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--fundo);
-    color: var(--branco);
+    color: var(--texto);
     line-height: 1.6;
 }
 
@@ -30,6 +31,8 @@ a {
     text-decoration: none;
 }
 
+/* MENU */
+
 .topo {
     min-height: 76px;
     padding: 0 6%;
@@ -37,19 +40,17 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    background: rgba(7,9,20,0.92);
+    background: rgba(255,255,255,0.96);
     border-bottom: 1px solid var(--borda);
     position: sticky;
     top: 0;
     z-index: 100;
-    backdrop-filter: blur(15px);
 }
 
 .logo {
     font-size: 25px;
     font-weight: 900;
     letter-spacing: 2px;
-    white-space: nowrap;
 }
 
 .logo span {
@@ -64,17 +65,19 @@ nav {
 }
 
 nav a {
-    color: var(--cinza);
+    color: #526078;
     font-size: 14px;
-    transition: 0.2s;
+    font-weight: 600;
 }
 
 nav a:hover {
-    color: white;
+    color: var(--azul);
 }
 
+/* HERO */
+
 .hero {
-    min-height: 650px;
+    min-height: 620px;
     padding: 80px 8%;
     display: flex;
     align-items: center;
@@ -82,9 +85,9 @@ nav a:hover {
     gap: 50px;
     overflow: hidden;
     background:
-        radial-gradient(circle at 75% 45%, rgba(79,140,255,0.22), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(155,124,255,0.16), transparent 25%),
-        var(--fundo);
+        radial-gradient(circle at 75% 45%, rgba(37,99,235,0.12), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(128,100,217,0.12), transparent 25%),
+        #ffffff;
 }
 
 .hero-texto {
@@ -103,7 +106,7 @@ nav a:hover {
 
 .hero h1 {
     margin: 18px 0;
-    font-size: clamp(44px, 6vw, 78px);
+    font-size: clamp(44px, 6vw, 76px);
     line-height: 1.03;
     letter-spacing: -3px;
 }
@@ -129,7 +132,7 @@ nav a:hover {
 .botao {
     display: inline-block;
     padding: 13px 24px;
-    border-radius: 8px;
+    border-radius: 9px;
     font-weight: 800;
     transition: 0.25s;
 }
@@ -141,18 +144,20 @@ nav a:hover {
 .principal {
     color: white;
     background: linear-gradient(135deg, var(--azul), var(--lilas));
-    box-shadow: 0 10px 30px rgba(79,140,255,0.22);
+    box-shadow: 0 10px 25px rgba(37,99,235,0.20);
 }
 
 .secundario {
     border: 1px solid var(--borda);
-    color: var(--branco);
-    background: rgba(255,255,255,0.03);
+    color: var(--texto);
+    background: white;
 }
+
+/* CELULAR */
 
 .hero-visual {
     width: 380px;
-    height: 480px;
+    height: 450px;
     position: relative;
     display: flex;
     align-items: center;
@@ -161,22 +166,22 @@ nav a:hover {
 
 .orb {
     position: absolute;
-    width: 320px;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--azul), var(--lilas));
+    background: linear-gradient(135deg, #7aa7ff, #b19af0);
     filter: blur(55px);
-    opacity: 0.3;
+    opacity: 0.35;
 }
 
 .celular {
     position: relative;
     width: 205px;
     height: 390px;
-    border: 8px solid #222638;
+    border: 8px solid #d9dfeb;
     border-radius: 32px;
-    background: #05060c;
-    box-shadow: 0 0 60px rgba(79,140,255,0.35);
+    background: #ffffff;
+    box-shadow: 0 25px 55px rgba(30,50,90,0.18);
     transform: rotate(7deg);
 }
 
@@ -188,7 +193,7 @@ nav a:hover {
     width: 65px;
     height: 18px;
     border-radius: 20px;
-    background: #171a28;
+    background: #d8ddea;
     z-index: 2;
 }
 
@@ -200,19 +205,23 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     background:
-        radial-gradient(circle at 50% 35%, rgba(155,124,255,0.45), transparent 25%),
-        linear-gradient(160deg, #07152e, #15102b);
+        radial-gradient(circle at 50% 35%, rgba(128,100,217,0.25), transparent 25%),
+        linear-gradient(160deg, #eaf2ff, #f2edff);
 }
 
 .tela span {
     font-size: 14px;
     letter-spacing: 4px;
+    color: var(--azul);
 }
 
 .tela strong {
     font-size: 32px;
     letter-spacing: 3px;
+    color: var(--texto);
 }
+
+/* SEÇÕES */
 
 .categorias,
 .conteudo,
@@ -220,7 +229,7 @@ nav a:hover {
     width: 86%;
     max-width: 1200px;
     margin: auto;
-    padding: 90px 0;
+    padding: 80px 0;
 }
 
 .titulo-secao h2 {
@@ -240,13 +249,15 @@ nav a:hover {
     min-height: 180px;
     border: 1px solid var(--borda);
     border-radius: 15px;
-    background: linear-gradient(145deg, #0d1120, #090b15);
+    background: white;
+    box-shadow: 0 8px 25px rgba(30,50,90,0.06);
     transition: 0.25s;
 }
 
 .categoria:hover {
     transform: translateY(-5px);
-    border-color: rgba(79,140,255,0.45);
+    border-color: #b7ccf5;
+    box-shadow: 0 15px 30px rgba(30,50,90,0.10);
 }
 
 .icone {
@@ -261,10 +272,11 @@ nav a:hover {
 .categoria p,
 .produto p,
 .watch-card p,
-.review p,
-.about {
+.review p {
     color: var(--cinza);
 }
+
+/* PRODUTOS */
 
 .produtos {
     margin-top: 35px;
@@ -281,7 +293,8 @@ nav a:hover {
     padding: 28px;
     border: 1px solid var(--borda);
     border-radius: 18px;
-    background: #0c101d;
+    background: white;
+    box-shadow: 0 8px 25px rgba(30,50,90,0.06);
 }
 
 .produto-imagem {
@@ -293,11 +306,11 @@ nav a:hover {
     justify-content: center;
     border-radius: 14px;
     font-size: 65px;
-    background: linear-gradient(145deg, #102b59, #11152b);
+    background: linear-gradient(145deg, #e7f0ff, #f1edff);
 }
 
 .produto-imagem.roxo {
-    background: linear-gradient(145deg, #261a52, #11152b);
+    background: linear-gradient(145deg, #eee9ff, #e8f1ff);
 }
 
 .produto-info span,
@@ -317,9 +330,11 @@ nav a:hover {
 .watch-card a {
     display: inline-block;
     margin-top: 15px;
-    color: #8db3ff;
+    color: var(--azul);
     font-weight: bold;
 }
+
+/* FAIXA */
 
 .faixa {
     width: 86%;
@@ -331,8 +346,8 @@ nav a:hover {
     justify-content: space-between;
     gap: 30px;
     border-radius: 20px;
-    background: linear-gradient(110deg, #111a35, #211740);
-    border: 1px solid var(--borda);
+    background: linear-gradient(110deg, #edf4ff, #f1edff);
+    border: 1px solid #dce5f5;
 }
 
 .faixa h2 {
@@ -344,6 +359,8 @@ nav a:hover {
     color: var(--cinza);
 }
 
+/* WATCH */
+
 .watch-card,
 .review {
     margin-top: 35px;
@@ -353,7 +370,8 @@ nav a:hover {
     gap: 30px;
     border: 1px solid var(--borda);
     border-radius: 18px;
-    background: #0c101d;
+    background: white;
+    box-shadow: 0 8px 25px rgba(30,50,90,0.06);
 }
 
 .watch-icon {
@@ -372,8 +390,10 @@ nav a:hover {
     color: var(--lilas);
 }
 
+/* COMPARATIVO */
+
 .comparativos {
-    background: #080a13;
+    background: #f9faff;
 }
 
 .comparativo-card {
@@ -386,7 +406,8 @@ nav a:hover {
     text-align: center;
     border: 1px solid var(--borda);
     border-radius: 20px;
-    background: #0d1120;
+    background: white;
+    box-shadow: 0 10px 30px rgba(30,50,90,0.07);
 }
 
 .item {
@@ -411,9 +432,12 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+    color: white;
     background: linear-gradient(135deg, var(--azul), var(--lilas));
     font-weight: 900;
 }
+
+/* OFERTAS */
 
 .ofertas {
     width: 86%;
@@ -426,9 +450,9 @@ nav a:hover {
     gap: 30px;
     border-radius: 22px;
     background:
-        radial-gradient(circle at 80% 50%, rgba(155,124,255,0.3), transparent 35%),
-        linear-gradient(120deg, #111d3d, #17112c);
-    border: 1px solid rgba(155,124,255,0.25);
+        radial-gradient(circle at 80% 50%, rgba(128,100,217,0.20), transparent 35%),
+        linear-gradient(120deg, #eaf2ff, #f2edff);
+    border: 1px solid #dce5f5;
 }
 
 .ofertas h2 {
@@ -442,15 +466,17 @@ nav a:hover {
 }
 
 .oferta-btn {
-    background: white;
-    color: #101426;
+    background: var(--azul);
+    color: white;
 }
 
+/* RODAPÉ */
+
 footer {
-    padding: 55px 8%;
+    padding: 50px 8%;
     text-align: center;
+    background: #eef2f8;
     border-top: 1px solid var(--borda);
-    background: #05060c;
 }
 
 footer p {
@@ -459,8 +485,10 @@ footer p {
 }
 
 footer small {
-    color: #666d83;
+    color: #8b94a7;
 }
+
+/* CELULAR */
 
 @media (max-width: 900px) {
     .topo {
@@ -526,9 +554,5 @@ footer small {
     .review {
         flex-direction: column;
         text-align: center;
-    }
-
-    .comparativo-card {
-        padding: 25px 10px;
     }
 }
