@@ -1,122 +1,154 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Atual | Tecnologia, Reviews e Ofertas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fb;
-    color: #1d2433;
-    line-height: 1.6;
-}
+<body>
 
-header {
-    background: linear-gradient(135deg, #111827, #2563eb);
-    color: white;
-    text-align: center;
-    padding: 45px 20px;
-}
+<header class="hero">
+    <div class="container">
+        <h1>Tech Atual</h1>
+        <p>Tecnologia inteligente para você escolher melhor.</p>
+        <a href="#ofertas" class="btn">🔥 Ver ofertas</a>
+    </div>
+</header>
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 8px;
-}
+<nav>
+    <div class="container menu">
+        <a href="#celulares">📱 Celulares</a>
+        <a href="#notebooks">💻 Notebooks</a>
+        <a href="#smartwatches">⌚ Smartwatches</a>
+        <a href="#comparativos">⚖️ Comparativos</a>
+        <a href="#ofertas">🔥 Ofertas</a>
+    </div>
+</nav>
 
-header p {
-    font-size: 18px;
-}
+<main class="container">
 
-nav {
-    background: white;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
+    <section class="intro">
+        <span>TECNOLOGIA SEM COMPLICAÇÃO</span>
+        <h2>Descubra antes de comprar</h2>
+        <p>
+            Reviews, comparativos e ofertas dos produtos que fazem parte
+            do seu dia a dia.
+        </p>
+    </section>
 
-nav a {
-    color: #1d4ed8;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 0 10px;
-}
+    <section id="celulares">
+        <h2>📱 Celulares em destaque</h2>
 
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px;
-}
+        <div class="grid">
+            <article class="card">
+                <div class="icon">📱</div>
+                <h3>Celulares</h3>
+                <p>Compare câmeras, desempenho, bateria e recursos antes de escolher.</p>
+                <a href="#ofertas">Ver opções →</a>
+            </article>
 
-section {
-    margin-bottom: 35px;
-}
+            <article class="card">
+                <div class="icon">📸</div>
+                <h3>Melhores câmeras</h3>
+                <p>Descubra quais smartphones se destacam para fotos e vídeos.</p>
+                <a href="#comparativos">Comparar →</a>
+            </article>
 
-section h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
+            <article class="card">
+                <div class="icon">⚡</div>
+                <h3>Desempenho</h3>
+                <p>Veja quais modelos entregam velocidade e bom desempenho.</p>
+                <a href="#comparativos">Ver comparativos →</a>
+            </article>
+        </div>
+    </section>
 
-.destaque {
-    background: white;
-    border-radius: 18px;
-    padding: 35px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-}
+    <section id="notebooks">
+        <h2>💻 Notebooks</h2>
 
-.destaque h2 {
-    color: #2563eb;
-}
+        <div class="feature">
+            <div class="feature-icon">💻</div>
+            <div>
+                <h3>Qual notebook combina com você?</h3>
+                <p>
+                    Trabalho, estudos, produtividade ou entretenimento:
+                    encontre opções para diferentes necessidades.
+                </p>
+                <a href="#ofertas" class="btn">Ver notebooks</a>
+            </div>
+        </div>
+    </section>
 
-.card {
-    background: white;
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-}
+    <section id="smartwatches">
+        <h2>⌚ Smartwatches</h2>
 
-.card h3 {
-    font-size: 22px;
-    margin-bottom: 8px;
-}
+        <div class="grid">
+            <article class="card">
+                <div class="icon">⌚</div>
+                <h3>Smartwatches</h3>
+                <p>Recursos, bateria, conectividade e custo-benefício.</p>
+                <a href="#ofertas">Ver opções →</a>
+            </article>
 
-.botao {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 11px 22px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
+            <article class="card">
+                <div class="icon">🏃</div>
+                <h3>Para o dia a dia</h3>
+                <p>Opções para acompanhar sua rotina com praticidade.</p>
+                <a href="#comparativos">Comparar →</a>
+            </article>
+        </div>
+    </section>
 
-.botao:hover {
-    background: #1d4ed8;
-}
+    <section id="comparativos">
+        <h2>⚖️ Comparativos</h2>
 
-footer {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 30px;
-}
+        <div class="comparison">
+            <h3>Antes de comprar, compare.</h3>
+            <p>
+                Colocamos os produtos lado a lado para você entender
+                as diferenças e escolher com mais segurança.
+            </p>
+            <a href="#ofertas" class="btn">Ver comparativos</a>
+        </div>
+    </section>
 
-@media (max-width: 700px) {
-    header h1 {
-        font-size: 32px;
-    }
+    <section id="ofertas">
+        <h2>🔥 Ofertas</h2>
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
+        <div class="offer">
+            <div>
+                <span class="tag">OFERTAS DE TECNOLOGIA</span>
+                <h3>Encontre produtos interessantes pelo melhor preço</h3>
+                <p>
+                    Selecionamos produtos de tecnologia para facilitar
+                    sua busca.
+                </p>
+            </div>
 
-    .destaque {
-        padding: 25px 18px;
-    }
-}
+            <a href="#" class="btn">Ver ofertas →</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>Sobre o Tech Atual</h2>
+        <p>
+            O Tech Atual nasceu para ajudar você a entender tecnologia
+            de forma simples, encontrar bons produtos e tomar decisões
+            melhores antes de comprar.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <h3>Tech Atual</h3>
+        <p>Tecnologia, reviews, comparativos e ofertas.</p>
+        <p class="copyright">© 2026 Tech Atual. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
