@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Atual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+    <h1>Tech Atual</h1>
+    <p>Tecnologia, reviews, comparativos e ofertas</p>
+</header>
+
+<nav>
+    <a href="#celulares">Celulares</a>
+    <a href="#notebooks">Notebooks</a>
+    <a href="#smartwatches">Smartwatches</a>
+    <a href="#comparativos">Comparativos</a>
+    <a href="#ofertas">Ofertas</a>
+</nav>
+
+<main>
+
+    <section class="destaque">
+        <h2>🚀 Tecnologia sem complicação</h2>
+        <p>
+            Descubra os melhores celulares, notebooks, smartwatches
+            e produtos de tecnologia antes de comprar.
+        </p>
+    </section>
+
+    <section id="celulares">
+        <h2>📱 Celulares</h2>
+        <div class="card">
+            <h3>Os melhores celulares para comprar</h3>
+            <p>Confira modelos, recursos, preços e descubra qual combina com você.</p>
+            <a class="botao" href="#ofertas">Ver ofertas</a>
+        </div>
+    </section>
+
+    <section id="notebooks">
+        <h2>💻 Notebooks</h2>
+        <div class="card">
+            <h3>Qual notebook vale a pena?</h3>
+            <p>Comparativos para trabalho, estudos, entretenimento e produtividade.</p>
+            <a class="botao" href="#ofertas">Ver ofertas</a>
+        </div>
+    </section>
+
+    <section id="smartwatches">
+        <h2>⌚ Smartwatches</h2>
+        <div class="card">
+            <h3>Relógios inteligentes em destaque</h3>
+            <p>Veja recursos, diferenças entre modelos e opções interessantes.</p>
+            <a class="botao" href="#ofertas">Ver ofertas</a>
+        </div>
+    </section>
+
+    <section id="comparativos">
+        <h2>⚖️ Comparativos</h2>
+        <div class="card">
+            <h3>Antes de comprar, compare</h3>
+            <p>Colocamos produtos lado a lado para facilitar sua decisão.</p>
+        </div>
+    </section>
+
+    <section id="ofertas">
+        <h2>🔥 Ofertas</h2>
+        <div class="card">
+            <h3>Ofertas de tecnologia</h3>
+            <p>Encontre produtos com bons preços e aproveite as melhores oportunidades.</p>
+            <a class="botao" href="#">Ver produtos</a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Tech Atual — Tecnologia, reviews, comparativos e ofertas.</p>
+</footer>
+
+</body>
+</html>
