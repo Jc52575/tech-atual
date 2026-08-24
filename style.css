@@ -85,9 +85,10 @@ nav a:hover {
     gap: 50px;
     overflow: hidden;
     background:
-        radial-gradient(circle at 75% 45%, rgba(37,99,235,0.12), transparent 30%),
-        radial-gradient(circle at 90% 20%, rgba(128,100,217,0.12), transparent 25%),
-        #ffffff;
+       background:
+    radial-gradient(circle at 75% 45%, rgba(37,87,184,0.20), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(117,97,184,0.18), transparent 25%),
+    #cbd5e5; 
 }
 
 .hero-texto {
