@@ -1,217 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Atual | Tecnologia Inteligente</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Achadinhos Atual: produtos, ofertas e recomendações de tecnologia, beleza, moda, casa e muito mais. Compare antes de comprar.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="Achadinhos Atual — Produtos que valem a compra">
+<meta property="og:description" content="Achados, ofertas e recomendações para comprar melhor e gastar menos.">
+<title>Achadinhos Atual — Produtos que valem a compra</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header class="topo">
-    <div class="logo">TECH<span>ATUAL</span></div>
-
+<header>
+  <div class="container nav">
+    <a class="logo" href="#inicio">ACHADINHOS<span>ATUAL</span></a>
     <nav>
-        <a href="#celulares">Celulares</a>
-        <a href="#notebooks">Notebooks</a>
-        <a href="#smartwatches">Smartwatches</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#comparativos">Comparativos</a>
-        <a href="#ofertas">Ofertas</a>
+      <a href="#achados">Achadinhos</a><a href="#categorias">Categorias</a><a href="#guias">Guias</a><a href="#sobre">Sobre</a>
     </nav>
+    <a class="top-btn" href="#achados">Ver ofertas</a>
+  </div>
 </header>
 
-<main>
+<main id="inicio">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">ACHADOS • OFERTAS • RECOMENDAÇÕES</p>
+      <h1>Encontre coisas <em>boas</em> sem perder horas procurando.</h1>
+      <p class="lead">Um portal de achadinhos para descobrir produtos que realmente valem a pena — de tecnologia e beleza a moda, casa, fitness e muito mais.</p>
+      <div class="hero-actions"><a class="btn" href="#achados">🔥 Ver achadinhos</a><a class="text-btn" href="#categorias">Explorar categorias →</a></div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-top"><span>✨ SELEÇÃO ATUAL</span><b>Ofertas em destaque</b></div>
+      <div class="mini-grid"><div>📱<strong>Tecnologia</strong><small>celulares, notebooks</small></div><div>💄<strong>Beleza</strong><small>cabelo, skincare</small></div><div>👟<strong>Moda & fitness</strong><small>looks e treino</small></div><div>🏠<strong>Casa</strong><small>utilidades e decoração</small></div></div>
+      <p class="card-tip">💡 <b>Dica:</b> confira a oferta antes de comprar — preço e disponibilidade podem mudar.</p>
+    </div>
+  </div>
+</section>
 
-    <section class="hero">
-        <div class="hero-texto">
-            <p class="mini-titulo">TECNOLOGIA • INFORMAÇÃO • ESCOLHA</p>
+<section class="container section" id="categorias">
+  <p class="eyebrow">NAVEGUE</p><h2>O que você está procurando?</h2>
+  <div class="categories">
+    <a href="#achados" data-filter="Tecnologia">📱<b>Tecnologia</b><small>Celulares, notebooks, relógios e acessórios</small></a>
+    <a href="#achados" data-filter="Beleza">💄<b>Beleza & cabelo</b><small>Cuidados, maquiagem e produtos capilares</small></a>
+    <a href="#achados" data-filter="Moda">👟<b>Moda & fitness</b><small>Roupas, tênis e acessórios para treinar</small></a>
+    <a href="#achados" data-filter="Casa">🏠<b>Casa & organização</b><small>Utilidades, decoração e praticidade</small></a>
+    <a href="#achados" data-filter="Eletrônicos">🎧<b>Eletrônicos</b><small>Fones, gadgets, acessórios e novidades</small></a>
+    <a href="#achados" data-filter="Ofertas">🔥<b>Ofertas do momento</b><small>Achados variados com bom custo-benefício</small></a>
+  </div>
+</section>
 
-            <h1>
-                A tecnologia que você
-                <span>precisa conhecer.</span>
-            </h1>
+<section class="section deals" id="achados">
+<div class="container">
+  <div class="section-head"><div><p class="eyebrow">ACHADINHOS</p><h2>Produtos em destaque</h2></div><div class="filters"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Tecnologia">Tecnologia</button><button class="filter" data-filter="Beleza">Beleza</button><button class="filter" data-filter="Moda">Moda</button><button class="filter" data-filter="Casa">Casa</button><button class="filter" data-filter="Eletrônicos">Eletrônicos</button></div></div>
+  <div class="products">
+    <article class="product" data-category="Tecnologia"><div class="product-img">📱</div><div class="product-body"><span>TECNOLOGIA</span><h3>Celular em destaque</h3><p>Desempenho, câmera e bateria para o dia a dia.</p><div class="rating">★★★★★ <small>Achado recomendado</small></div><a class="buy" href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
+    <article class="product" data-category="Tecnologia"><div class="product-img">💻</div><div class="product-body"><span>TECNOLOGIA</span><h3>Notebook para trabalho e estudo</h3><p>Uma opção para produtividade, estudos e tarefas do dia a dia.</p><div class="rating">★★★★☆ <small>Custo-benefício</small></div><a class="buy" href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
+    <article class="product" data-category="Beleza"><div class="product-img">💆‍♀️</div><div class="product-body"><span>BELEZA & CABELO</span><h3>Achadinho para cuidar dos cabelos</h3><p>Produtos e acessórios selecionados para sua rotina de beleza.</p><div class="rating">★★★★★ <small>Vale conhecer</small></div><a class="buy" href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
+    <article class="product" data-category="Moda"><div class="product-img">👟</div><div class="product-body"><span>MODA & FITNESS</span><h3>Look fitness em destaque</h3><p>Conforto e estilo para treinar sem gastar uma fortuna.</p><div class="rating">★★★★★ <small>Achado fitness</small></div><a class="buy" href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
+    <article class="product" data-category="Casa"><div class="product-img">🧺</div><div class="product-body"><span>CASA</span><h3>Organizador que facilita a rotina</h3><p>Pequenas compras que deixam a casa mais prática.</p><div class="rating">★★★★☆ <small>Utilidade</small></div><a class="buy" href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
+    <article class="product" data-category="Eletrônicos"><div class="product-img">🎧</div><div class="product-body"><span>ELETRÔNICOS</span><h3>Fone sem fio em destaque</h3><p>Para música, chamadas e entretenimento no dia a dia.</p><div class="rating">★★★★★ <small>Achado atual</small></div><a class="buy" href="SEU_LINK_DE_AFILIADO_AQUI" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
+  </div>
+  <p class="affiliate-note">🔗 <b>Transparência:</b> alguns links são links de afiliado. Se você comprar por eles, o portal pode receber uma comissão, sem custo adicional para você.</p>
+</div>
+</section>
 
-            <p class="descricao">
-                Reviews, comparativos e ofertas para você descobrir
-                os melhores produtos antes de comprar.
-            </p>
+<section class="dark section" id="guias"><div class="container">
+<p class="eyebrow">GUIAS & DICAS</p><h2>Antes de comprar, veja o que importa.</h2>
+<div class="articles">
+<article><span>📱 TECNOLOGIA</span><h3>Como escolher um celular sem pagar por recursos que você não usa</h3><p>Entenda tela, câmera, memória, bateria e desempenho.</p><a href="#">Ler guia →</a></article>
+<article><span>💄 BELEZA</span><h3>Como escolher produtos para o cabelo</h3><p>Veja como comparar finalidade, ingredientes e custo-benefício.</p><a href="#">Ler guia →</a></article>
+<article><span>👟 MODA & FITNESS</span><h3>O que observar em roupa e tênis para treinar</h3><p>Conforto, tecido, ajuste e durabilidade fazem diferença.</p><a href="#">Ler guia →</a></article>
+</div>
+</div></section>
 
-            <div class="hero-botoes">
-                <a href="https://meli.la/26jCXMn" class="botao principal" target="_blank" rel="noopener">Ver ofertas</a>
-                <a href="#comparativos" class="botao secundario">Comparar produtos</a>
-            </div>
-        </div>
-
-        <div class="hero-visual">
-            <div class="orb"></div>
-            <div class="celular">
-                <div class="camera"></div>
-                <div class="tela">
-                    <span>TECH</span>
-                    <strong>ATUAL</strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="categorias">
-        <div class="titulo-secao">
-            <p>EXPLORE</p>
-            <h2>Encontre o que procura</h2>
-        </div>
-
-        <div class="categoria-grid">
-
-            <a href="#celulares" class="categoria">
-                <div class="icone">📱</div>
-                <h3>Celulares</h3>
-                <p>Modelos, câmeras e desempenho</p>
-            </a>
-
-            <a href="#notebooks" class="categoria">
-                <div class="icone">💻</div>
-                <h3>Notebooks</h3>
-                <p>Trabalho, estudos e produtividade</p>
-            </a>
-
-            <a href="#smartwatches" class="categoria">
-                <div class="icone">⌚</div>
-                <h3>Smartwatches</h3>
-                <p>Recursos e custo-benefício</p>
-            </a>
-
-            <a href="#ofertas" class="categoria">
-                <div class="icone">🔥</div>
-                <h3>Ofertas</h3>
-                <p>Produtos que valem a pena</p>
-            </a>
-
-        </div>
-    </section>
-
-    <section id="celulares" class="conteudo">
-        <div class="titulo-secao">
-            <p>DESTAQUES</p>
-            <h2>Celulares</h2>
-        </div>
-
-        <div class="produtos">
-
-            <article class="produto">
-                <div class="produto-imagem">📱</div>
-                <div class="produto-info">
-                    <span>SMARTPHONE</span>
-                    <h3>Os melhores celulares do momento</h3>
-                    <p>Desempenho, câmera, bateria e recursos para ajudar na sua escolha.</p>
-                    <a href="#comparativos">Ver análise →</a>
-                </div>
-            </article>
-
-            <article class="produto">
-                <div class="produto-imagem roxo">📸</div>
-                <div class="produto-info">
-                    <span>FOTOGRAFIA</span>
-                    <h3>Celulares com câmeras incríveis</h3>
-                    <p>Descubra quais modelos entregam fotos e vídeos de qualidade.</p>
-                    <a href="#comparativos">Comparar →</a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <section id="notebooks" class="faixa">
-        <div>
-            <p>TECNOLOGIA PARA SUA ROTINA</p>
-            <h2>Qual notebook combina com você?</h2>
-            <span>Encontre opções para trabalho, estudos e entretenimento.</span>
-        </div>
-
-        <a href="#ofertas" class="botao principal">Ver notebooks</a>
-    </section>
-
-    <section id="smartwatches" class="conteudo">
-        <div class="titulo-secao">
-            <p>WEARABLES</p>
-            <h2>Smartwatches</h2>
-        </div>
-
-        <div class="watch-card">
-            <div class="watch-icon">⌚</div>
-            <div>
-                <h3>Tecnologia no seu pulso</h3>
-                <p>
-                    Compare recursos, bateria, conectividade e estilo
-                    antes de escolher seu próximo smartwatch.
-                </p>
-                <a href="#comparativos">Ver comparativos →</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="reviews" class="conteudo">
-        <div class="titulo-secao">
-            <p>OPINIÃO</p>
-            <h2>Reviews</h2>
-        </div>
-
-        <div class="review">
-            <div class="review-numero">01</div>
-            <div>
-                <span>REVIEW TECH ATUAL</span>
-                <h3>Antes de comprar, conheça o produto.</h3>
-                <p>
-                    Análises simples e objetivas para você entender
-                    o que realmente importa.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="comparativos" class="comparativos">
-        <div class="titulo-secao">
-            <p>DECIDA MELHOR</p>
-            <h2>Comparativos</h2>
-        </div>
-
-        <div class="comparativo-card">
-            <div class="item">
-                <span>PRODUTO A</span>
-                <strong>📱</strong>
-                <h3>Opção A</h3>
-            </div>
-
-            <div class="versus">VS</div>
-
-            <div class="item">
-                <span>PRODUTO B</span>
-                <strong>📱</strong>
-                <h3>Opção B</h3>
-            </div>
-        </div>
-    </section>
-
-    <section id="ofertas" class="ofertas">
-        <div>
-            <p>🔥 OFERTAS</p>
-            <h2>Boas oportunidades<br>em tecnologia.</h2>
-            <span>
-                Produtos selecionados para facilitar sua busca.
-            </span>
-        </div>
-
-        <a href="#" class="botao oferta-btn">Ver ofertas →</a>
-    </section>
-
+<section class="container section" id="sobre"><p class="eyebrow">SOBRE O PORTAL</p><h2>Achadinhos para a vida real.</h2><p class="wide">O Achadinhos Atual é um portal independente de descoberta de produtos. A ideia é reunir recomendações, comparações, guias e ofertas em diferentes categorias para ajudar você a comprar melhor, sem precisar pesquisar em dezenas de lugares.</p><div class="trust"><div>🔎<b>Pesquisa</b><small>Informação antes da compra</small></div><div>⚖️<b>Comparação</b><small>Prós, contras e custo-benefício</small></div><div>💰<b>Ofertas</b><small>Links para conferir o produto</small></div></div></section>
 </main>
 
-<footer>
-    <div class="logo">TECH<span>ATUAL</span></div>
-    <p>Tecnologia inteligente para escolhas melhores.</p>
-    <small>© 2026 Tech Atual</small>
-</footer>
-
-</body>
-</html>
+<footer><div class="container footer"><div><a class="logo" href="#inicio">ACHADINHOS<span>ATUAL</span></a><p>Produtos que valem a compra.</p></div><div class="footer-links"><a href="#sobre">Sobre</a><a href="#">Política de Privacidade</a><a href="#">Termos de Uso</a><a href="#">Divulgação de Afiliados</a><p>© 2026 Achadinhos Atual</p></div></div></footer>
+<script>
+const buttons=[...document.querySelectorAll('.filter')];
+const cards=[...document.querySelectorAll('.product')];
+function filterProducts(cat){cards.forEach(c=>c.style.display=(cat==='Todos'||c.dataset.category===cat)?'':'none');buttons.forEach(b=>b.classList.toggle('active',b.dataset.filter===cat));document.querySelector('#achados').scrollIntoView({behavior:'smooth'});}
+buttons.forEach(b=>b.addEventListener('click',()=>filterProducts(b.dataset.filter)));
+document.querySelectorAll('.categories a').forEach(a=>a.addEventListener('click',()=>filterProducts(a.dataset.filter)));
+</script>
+</body></html>
