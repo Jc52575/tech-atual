@@ -1,88 +1,334 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Achadinhos Atual: produtos, ofertas e recomendações de tecnologia, beleza, moda, casa e muito mais. Compare antes de comprar.">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="Achadinhos Atual — Produtos que valem a compra">
-<meta property="og:description" content="Achados, ofertas e recomendações para comprar melhor e gastar menos.">
-<title>Achadinhos Atual — Produtos que valem a compra</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Achadinhos Atual | Encontre coisas boas sem perder horas procurando</title>
+
+  <meta name="description" content="Encontre achadinhos, melhores produtos, ofertas e seleções de tecnologia, beleza, moda, casa, bebês, livros e muito mais.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f5fa;
+      color: #29232f;
+    }
+
+    header {
+      background: linear-gradient(135deg, #7026b9, #c026d3);
+      color: white;
+      text-align: center;
+      padding: 38px 18px;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 25px 16px 50px;
+    }
+
+    h2 {
+      margin: 30px 0 15px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.08);
+      border: 1px solid #eee;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+      min-height: 42px;
+    }
+
+    .btn {
+      display: block;
+      text-align: center;
+      background: #7026b9;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      opacity: .9;
+    }
+
+    .intro {
+      background: white;
+      padding: 22px;
+      border-radius: 18px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 12px rgba(0,0,0,.07);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #777;
+      font-size: 13px;
+    }
+  </style>
 </head>
+
 <body>
+
 <header>
-  <div class="container nav">
-    <a class="logo" href="#inicio">ACHADINHOS<span>ATUAL</span></a>
-    <nav>
-      <a href="#achados">Achadinhos</a><a href="#categorias">Categorias</a><a href="#guias">Guias</a><a href="#sobre">Sobre</a>
-    </nav>
-    <a class="top-btn" href="#achados">Ver ofertas</a>
-  </div>
+  <h1>🛍️ Achadinhos Atual</h1>
+  <p>Encontre coisas boas sem perder horas procurando.</p>
 </header>
 
-<main id="inicio">
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="eyebrow">ACHADOS • OFERTAS • RECOMENDAÇÕES</p>
-      <h1>Encontre coisas <em>boas</em> sem perder horas procurando.</h1>
-      <p class="lead">Um portal de achadinhos para descobrir produtos que realmente valem a pena — de tecnologia e beleza a moda, casa, fitness e muito mais.</p>
-      <div class="hero-actions"><a class="btn" href="#achados">🔥 Ver achadinhos</a><a class="text-btn" href="#categorias">Explorar categorias →</a></div>
+<main>
+
+  <section class="intro">
+    <h2>🔥 Descubra seus próximos achadinhos</h2>
+    <p>
+      Selecionamos produtos, ofertas e categorias para você encontrar
+      coisas interessantes sem precisar passar horas procurando.
+    </p>
+  </section>
+
+
+  <h2>🔥 Ofertas e Seleções</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>💰 Produtos Baratos</h3>
+      <p>Achadinhos para quem quer economizar.</p>
+      <a class="btn" href="https://meli.la/2bSmsgu">VER OFERTAS</a>
     </div>
-    <div class="hero-card">
-      <div class="hero-card-top"><span>✨ SELEÇÃO ATUAL</span><b>Ofertas em destaque</b></div>
-      <div class="mini-grid"><div>📱<strong>Tecnologia</strong><small>celulares, notebooks</small></div><div>💄<strong>Beleza</strong><small>cabelo, skincare</small></div><div>👟<strong>Moda & fitness</strong><small>looks e treino</small></div><div>🏠<strong>Casa</strong><small>utilidades e decoração</small></div></div>
-      <p class="card-tip">💡 <b>Dica:</b> confira a oferta antes de comprar — preço e disponibilidade podem mudar.</p>
+
+    <div class="card">
+      <h3>🏆 Melhores Produtos</h3>
+      <p>Uma seleção de produtos que merecem atenção.</p>
+      <a class="btn" href="https://meli.la/1dR2wwR">VER SELEÇÃO</a>
     </div>
+
+    <div class="card">
+      <h3>🔥 Ofertas do Momento</h3>
+      <p>Confira ofertas e oportunidades disponíveis.</p>
+      <a class="btn" href="https://www.mercadolivre.com.br/">VER OFERTAS</a>
+    </div>
+
   </div>
-</section>
 
-<section class="container section" id="categorias">
-  <p class="eyebrow">NAVEGUE</p><h2>O que você está procurando?</h2>
-  <div class="categories">
-    <a href="#achados" data-filter="Tecnologia">📱<b>Tecnologia</b><small>Celulares, notebooks, relógios e acessórios</small></a>
-    <a href="#achados" data-filter="Beleza">💄<b>Beleza & cabelo</b><small>Cuidados, maquiagem e produtos capilares</small></a>
-    <a href="#achados" data-filter="Moda">👟<b>Moda & fitness</b><small>Roupas, tênis e acessórios para treinar</small></a>
-    <a href="#achados" data-filter="Casa">🏠<b>Casa & organização</b><small>Utilidades, decoração e praticidade</small></a>
-    <a href="#achados" data-filter="Eletrônicos">🎧<b>Eletrônicos</b><small>Fones, gadgets, acessórios e novidades</small></a>
-    <a href="#achados" data-filter="Ofertas">🔥<b>Ofertas do momento</b><small>Achados variados com bom custo-benefício</small></a>
+
+  <h2>📱 Tecnologia e Eletrônicos</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📱 Tecnologia</h3>
+      <p>Celulares, notebooks, informática e novidades.</p>
+      <a class="btn" href="https://meli.la/1BL8vq7">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>🔌 Elétricos e Eletrônicos</h3>
+      <p>Eletrônicos, acessórios e produtos elétricos.</p>
+      <a class="btn" href="https://meli.la/1915PA9">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>🍳 Eletrodomésticos</h3>
+      <p>Produtos para facilitar sua rotina em casa.</p>
+      <a class="btn" href="https://meli.la/1VDxRMH">VER OFERTAS</a>
+    </div>
+
   </div>
-</section>
 
-<section class="section deals" id="achados">
-<div class="container">
-  <div class="section-head"><div><p class="eyebrow">ACHADINHOS</p><h2>Produtos em destaque</h2></div><div class="filters"><button class="filter active" data-filter="Todos">Todos</button><button class="filter" data-filter="Tecnologia">Tecnologia</button><button class="filter" data-filter="Beleza">Beleza</button><button class="filter" data-filter="Moda">Moda</button><button class="filter" data-filter="Casa">Casa</button><button class="filter" data-filter="Eletrônicos">Eletrônicos</button></div></div>
-  <div class="products">
-    <article class="product" data-category="Tecnologia"><div class="product-img">📱</div><div class="product-body"><span>TECNOLOGIA</span><h3>Celular em destaque</h3><p>Desempenho, câmera e bateria para o dia a dia.</p><div class="rating">★★★★★ <small>Achado recomendado</small></div><a class="buy" href="https://meli.la/1HuJ9Yh" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
-    <article class="product" data-category="Tecnologia"><div class="product-img">💻</div><div class="product-body"><span>TECNOLOGIA</span><h3>Notebook para trabalho e estudo</h3><p>Uma opção para produtividade, estudos e tarefas do dia a dia.</p><div class="rating">★★★★☆ <small>Custo-benefício</small></div><a class="buy" href="https://lista.mercadolivre.com.br/notebook" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
-    <article class="product" data-category="Beleza"><div class="product-img">💆‍♀️</div><div class="product-body"><span>BELEZA & CABELO</span><h3>Achadinho para cuidar dos cabelos</h3><p>Produtos e acessórios selecionados para sua rotina de beleza.</p><div class="rating">★★★★★ <small>Vale conhecer</small></div><a class="buy" href="https://lista.mercadolivre.com.br/produtos-para-cabelo" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
-    <article class="product" data-category="Moda"><div class="product-img">👟</div><div class="product-body"><span>MODA & FITNESS</span><h3>Look fitness em destaque</h3><p>Conforto e estilo para treinar sem gastar uma fortuna.</p><div class="rating">★★★★★ <small>Achado fitness</small></div><a class="buy" href="https://lista.mercadolivre.com.br/roupa-fitness-feminina" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
-    <article class="product" data-category="Casa"><div class="product-img">🧺</div><div class="product-body"><span>CASA</span><h3>Organizador que facilita a rotina</h3><p>Pequenas compras que deixam a casa mais prática.</p><div class="rating">★★★★☆ <small>Utilidade</small></div><a class="buy" href="https://lista.mercadolivre.com.br/organizador-de-casa" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
-    <article class="product" data-category="Eletrônicos"><div class="product-img">🎧</div><div class="product-body"><span>ELETRÔNICOS</span><h3>Fone sem fio em destaque</h3><p>Para música, chamadas e entretenimento no dia a dia.</p><div class="rating">★★★★★ <small>Achado atual</small></div><a class="buy" href="https://lista.mercadolivre.com.br/fone-bluetooth" target="_blank" rel="nofollow sponsored noopener">VER OFERTA ↗</a></div></article>
+
+  <h2>💄 Beleza e Cuidados</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>💇 Beleza & Cabelo</h3>
+      <p>Produtos para cabelos, beleza e cuidados.</p>
+      <a class="btn" href="https://meli.la/1HuJ9Yh">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>🌸 Cuidado Feminino</h3>
+      <p>Produtos selecionados para cuidados femininos.</p>
+      <a class="btn" href="https://meli.la/345xDAm">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>💄 Maquiagem</h3>
+      <p>Maquiagem e acessórios de beleza.</p>
+      <a class="btn" href="https://meli.la/1Pc2BWs">VER OFERTAS</a>
+    </div>
+
   </div>
-  <p class="affiliate-note">🔗 <b>Transparência:</b> alguns links são links de afiliado. Se você comprar por eles, o portal pode receber uma comissão, sem custo adicional para você.</p>
-</div>
-</section>
 
-<section class="dark section" id="guias"><div class="container">
-<p class="eyebrow">GUIAS & DICAS</p><h2>Antes de comprar, veja o que importa.</h2>
-<div class="articles">
-<article><span>📱 TECNOLOGIA</span><h3>Como escolher um celular sem pagar por recursos que você não usa</h3><p>Entenda tela, câmera, memória, bateria e desempenho.</p><a href="#">Ler guia →</a></article>
-<article><span>💄 BELEZA</span><h3>Como escolher produtos para o cabelo</h3><p>Veja como comparar finalidade, ingredientes e custo-benefício.</p><a href="#">Ler guia →</a></article>
-<article><span>👟 MODA & FITNESS</span><h3>O que observar em roupa e tênis para treinar</h3><p>Conforto, tecido, ajuste e durabilidade fazem diferença.</p><a href="#">Ler guia →</a></article>
-</div>
-</div></section>
 
-<section class="container section" id="sobre"><p class="eyebrow">SOBRE O PORTAL</p><h2>Achadinhos para a vida real.</h2><p class="wide">O Achadinhos Atual é um portal independente de descoberta de produtos. A ideia é reunir recomendações, comparações, guias e ofertas em diferentes categorias para ajudar você a comprar melhor, sem precisar pesquisar em dezenas de lugares.</p><div class="trust"><div>🔎<b>Pesquisa</b><small>Informação antes da compra</small></div><div>⚖️<b>Comparação</b><small>Prós, contras e custo-benefício</small></div><div>💰<b>Ofertas</b><small>Links para conferir o produto</small></div></div></section>
+  <h2>👗 Moda</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🏋️ Moda Fitness Masculina e Feminina</h3>
+      <p>Roupas e produtos para treino e academia.</p>
+      <a class="btn" href="https://meli.la/1t6yu6x">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>👕 Vestuário Masculino e Feminino</h3>
+      <p>Roupas masculinas e femininas.</p>
+      <a class="btn" href="https://meli.la/1HrqU3J">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>👟 Calçados Masculinos e Femininos</h3>
+      <p>Tênis, sapatos e calçados para todos os estilos.</p>
+      <a class="btn" href="https://meli.la/17Xy48i">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>👜 Acessórios Femininos</h3>
+      <p>Acessórios para complementar seu visual.</p>
+      <a class="btn" href="https://meli.la/27Lri2x">VER OFERTAS</a>
+    </div>
+
+  </div>
+
+
+  <h2>🏠 Casa</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🏠 Produtos para Casa</h3>
+      <p>Utilidades, organização e produtos para sua casa.</p>
+      <a class="btn" href="https://meli.la/2n8D6v2">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>🛏️ Cama, Mesa e Banho</h3>
+      <p>Produtos para quarto, mesa e banheiro.</p>
+      <a class="btn" href="https://meli.la/2k38yMe">VER OFERTAS</a>
+    </div>
+
+  </div>
+
+
+  <h2>👶 Bebês e Infantil</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>👶 Produtos para Bebês</h3>
+      <p>Produtos para bebês e cuidados infantis.</p>
+      <a class="btn" href="https://meli.la/1Y3sxXT">VER OFERTAS</a>
+    </div>
+
+    <div class="card">
+      <h3>🧒 Linha Infantil</h3>
+      <p>Produtos para crianças.</p>
+      <a class="btn" href="https://meli.la/2UQFDxK">VER OFERTAS</a>
+    </div>
+
+  </div>
+
+
+  <h2>📚 Livros</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>📚 Livros</h3>
+      <p>Livros para diferentes interesses e estilos.</p>
+      <a class="btn" href="https://meli.la/2PBPAFG">VER OFERTAS</a>
+    </div>
+
+  </div>
+
+
+  <h2>🚗 Automotivos</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🚗 Produtos Automotivos</h3>
+      <p>Acessórios e produtos para carros.</p>
+      <a class="btn" href="https://meli.la/1Jxnb21">VER OFERTAS</a>
+    </div>
+
+  </div>
+
+
+  <h2>🏆 Conteúdos que ajudam você a escolher</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>🏆 10 Melhores Produtos</h3>
+      <p>Listas e seleções para ajudar na sua escolha.</p>
+      <a class="btn" href="melhores-produtos.html">VER LISTA</a>
+    </div>
+
+    <div class="card">
+      <h3>💇 10 Melhores para Cabelo</h3>
+      <p>Produtos para cuidar dos cabelos.</p>
+      <a class="btn" href="melhores-produtos-cabelo.html">VER LISTA</a>
+    </div>
+
+    <div class="card">
+      <h3>💻 10 Melhores para Informática</h3>
+      <p>Produtos e acessórios de informática.</p>
+      <a class="btn" href="melhores-produtos-informatica.html">VER LISTA</a>
+    </div>
+
+    <div class="card">
+      <h3>📱 Melhores Celulares</h3>
+      <p>Celulares e opções de custo-benefício.</p>
+      <a class="btn" href="melhores-celulares.html">VER LISTA</a>
+    </div>
+
+  </div>
+
 </main>
 
-<footer><div class="container footer"><div><a class="logo" href="#inicio">ACHADINHOS<span>ATUAL</span></a><p>Produtos que valem a compra.</p></div><div class="footer-links"><a href="#sobre">Sobre</a><a href="#">Política de Privacidade</a><a href="#">Termos de Uso</a><a href="#">Divulgação de Afiliados</a><p>© 2026 Achadinhos Atual</p></div></div></footer>
-<script>
-const buttons=[...document.querySelectorAll('.filter')];
-const cards=[...document.querySelectorAll('.product')];
-function filterProducts(cat){cards.forEach(c=>c.style.display=(cat==='Todos'||c.dataset.category===cat)?'':'none');buttons.forEach(b=>b.classList.toggle('active',b.dataset.filter===cat));document.querySelector('#achados').scrollIntoView({behavior:'smooth'});}
-buttons.forEach(b=>b.addEventListener('click',()=>filterProducts(b.dataset.filter)));
-document.querySelectorAll('.categories a').forEach(a=>a.addEventListener('click',()=>filterProducts(a.dataset.filter)));
-</script>
-</body></html>
+<footer>
+  <p>© 2026 Achadinhos Atual — Encontre coisas boas sem perder horas procurando.</p>
+  <p>Alguns links podem gerar comissão para o portal.</p>
+</footer>
+
+</body>
+</html>
