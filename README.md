@@ -11,7 +11,7 @@ O antigo projeto **Tech Atual** foi transformado em um portal amplo de achadinho
 - Ofertas do momento
 
 ## Como publicar
-1. Substitua cada `SEU_LINK_DE_AFILIADO_AQUI` pelo link real do produto.
+1. Os botões já apontam para buscas válidas no Mercado Livre para evitar erros. Para ganhar comissão como afiliada, substitua esses endereços pelos seus links de afiliada do Mercado Livre.
 2. Não invente preço, avaliação, disponibilidade ou características. Atualize os textos quando tiver os dados reais.
 3. Mantenha `rel="nofollow sponsored noopener"` nos links de afiliado.
 4. Crie/complete as páginas de Política de Privacidade, Termos de Uso e Divulgação de Afiliados antes de divulgar o site.
