@@ -6,27 +6,343 @@
 
 <title>Jeane Indica | Achadinhos e ofertas que valem a pena</title>
 
-<meta name="description" content="Jeane Indica: achadinhos, ofertas e produtos selecionados de moda, beleza, tecnologia, casa, cama, mesa e banho e muito mais.">
+<meta name="description"
+content="Jeane Indica: achadinhos e ofertas selecionadas de moda, tecnologia, beleza, casa, cama, mesa e banho e muito mais.">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
-/* FOTOS DOS PRODUTOS — sem desenhos */
-.product-img {
-  height: 185px;
-  background: linear-gradient(135deg,#eee5fa,#e9f8f3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+
+body{
+margin:0;
+font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+color:#171a29;
+background:#fff;
+line-height:1.6
 }
 
-.product-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 8px;
-  display: block;
+a{text-decoration:none;color:inherit}
+
+.container{
+width:min(1160px,92%);
+margin:auto
+}
+
+header{
+background:rgba(255,255,255,.96);
+border-bottom:1px solid #ececf2;
+position:sticky;
+top:0;
+z-index:20;
+backdrop-filter:blur(10px)
+}
+
+.header-inner{
+min-height:72px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px
+}
+
+.logo{
+font-size:1.25rem;
+font-weight:950;
+letter-spacing:-.5px
+}
+
+.logo span{color:#7546dc}
+
+.header-text{
+color:#697285;
+font-size:.82rem
+}
+
+.hero{
+padding:70px 0;
+background:
+radial-gradient(circle at 85% 15%,#e8dcff 0,#f5f8ff 35%,#fff 72%);
+border-bottom:1px solid #eeeef5
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.15fr .85fr;
+gap:55px;
+align-items:center
+}
+
+.eyebrow{
+font-size:.7rem;
+letter-spacing:1.8px;
+font-weight:900;
+color:#7546dc;
+margin:0 0 10px
+}
+
+.hero h1{
+font-size:clamp(2.6rem,6vw,5rem);
+line-height:.98;
+letter-spacing:-3px;
+margin:0 0 20px
+}
+
+.hero h1 em{
+font-style:normal;
+color:#7546dc
+}
+
+.lead{
+font-size:1.08rem;
+color:#60697b;
+max-width:650px
+}
+
+.hero-card{
+background:#171a29;
+color:#fff;
+padding:28px;
+border-radius:22px;
+box-shadow:0 18px 45px rgba(31,23,55,.15)
+}
+
+.hero-card h3{
+margin-top:0
+}
+
+.hero-card p{
+color:#c7ccda;
+font-size:.9rem
+}
+
+.btn{
+display:inline-block;
+background:#7546dc;
+color:#fff;
+padding:13px 19px;
+border-radius:10px;
+font-weight:850;
+margin-top:18px
+}
+
+.section{
+padding:70px 0
+}
+
+.section h2{
+font-size:2.15rem;
+line-height:1.1;
+margin:0 0 12px;
+letter-spacing:-1px
+}
+
+.section-intro{
+color:#697285;
+margin-bottom:30px
+}
+
+/* CATEGORIAS */
+
+.categories{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.category{
+position:relative;
+height:230px;
+border-radius:20px;
+overflow:hidden;
+display:flex;
+align-items:flex-end;
+background-size:cover;
+background-position:center;
+box-shadow:0 8px 25px rgba(30,25,55,.10);
+transition:.2s
+}
+
+.category:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(68,39,120,.16)
+}
+
+.category::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(transparent 25%,rgba(15,18,30,.78))
+}
+
+.category-content{
+position:relative;
+z-index:2;
+padding:23px;
+color:#fff;
+width:100%
+}
+
+.category-content h3{
+margin:0 0 5px;
+font-size:1.35rem
+}
+
+.category-content p{
+margin:0;
+font-size:.82rem;
+color:#eee
+}
+
+/* PRODUTOS SEM FOTO */
+
+.product-section{
+background:#f6f6fa
+}
+
+.subcategory{
+margin:42px 0 18px
+}
+
+.subcategory h3{
+font-size:1.45rem;
+margin:0;
+color:#25283a
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px
+}
+
+.product{
+background:#fff;
+border:1px solid #e3e4eb;
+border-radius:16px;
+padding:20px;
+display:flex;
+flex-direction:column;
+min-height:210px;
+transition:.2s
+}
+
+.product:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(40,30,70,.08)
+}
+
+.product h4{
+margin:0 0 8px;
+font-size:1.05rem;
+line-height:1.3
+}
+
+.product p{
+color:#697285;
+font-size:.85rem;
+margin:0 0 14px
+}
+
+.price{
+font-weight:950;
+font-size:1.15rem;
+margin-top:auto;
+margin-bottom:13px
+}
+
+.offer{
+display:block;
+background:#7546dc;
+color:#fff;
+text-align:center;
+padding:11px;
+border-radius:9px;
+font-size:.8rem;
+font-weight:850
+}
+
+.notice{
+margin-top:25px;
+font-size:.78rem;
+color:#687386
+}
+
+/* IMAGENS DAS CATEGORIAS */
+
+.moda{
+background-image:url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=85")
+}
+
+.tecnologia{
+background-image:url("https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85")
+}
+
+.beauty{
+background-image:url("https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=1200&q=85")
+}
+
+.casa{
+background-image:url("https://images.unsplash.com/photo-1556912167-f556f1f39fdf?auto=format&fit=crop&w=1200&q=85")
+}
+
+.cama{
+background-image:url("https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=85")
+}
+
+.tv{
+background-image:url("https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&w=1200&q=85")
+}
+
+.bebe{
+background-image:url("https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=1200&q=85")
+}
+
+footer{
+background:#171a29;
+color:#fff;
+padding:40px 0
+}
+
+footer p{
+color:#aeb6c7;
+font-size:.8rem;
+margin:5px 0
+}
+
+@media(max-width:900px){
+.hero-grid{
+grid-template-columns:1fr
+}
+
+.categories,
+.products{
+grid-template-columns:1fr 1fr
+}
+}
+
+@media(max-width:600px){
+.header-text{
+display:none
+}
+
+.hero{
+padding:55px 0
+}
+
+.hero h1{
+letter-spacing:-2px
+}
+
+.categories,
+.products{
+grid-template-columns:1fr
+}
+
+.section{
+padding:50px 0
+}
 }
 </style>
 </head>
@@ -34,78 +350,98 @@
 <body>
 
 <header>
-  <div class="container">
-    <h1>🛍️ Jeane Indica</h1>
-    <p>Achadinhos e ofertas que valem a pena.</p>
-  </div>
+<div class="container header-inner">
+<div class="logo">🛍️ <span>Jeane Indica</span></div>
+<div class="header-text">Achadinhos e ofertas que valem a pena</div>
+</div>
 </header>
 
-<nav>
-  <div class="container">
-    <a href="#destaques">Pra você</a>
-    <a href="#moda">Moda</a>
-    <a href="#tecnologia">Tecnologia</a>
-    <a href="#cuidado-feminino">Cuidado Feminino</a>
-    <a href="#casa">Artigos de Casa</a>
-    <a href="#cama-mesa-banho">Cama, Mesa e Banho</a>
-    <a href="#televisores">Televisores</a>
-  </div>
-</nav>
+
+<section class="hero">
+<div class="container hero-grid">
+
+<div>
+<p class="eyebrow">ACHADINHOS SELECIONADOS</p>
+
+<h1>Encontre coisas boas <em>sem perder horas procurando.</em></h1>
+
+<p class="lead">
+Produtos selecionados, ofertas e achadinhos para facilitar sua busca.
+</p>
+
+<a class="btn" href="#categorias">Ver categorias</a>
+</div>
+
+<div class="hero-card">
+<h3>✨ Jeane Indica</h3>
+<p>
+Eu seleciono produtos e ofertas para você encontrar tudo em um só lugar.
+</p>
+<p>
+Clique no produto que interessar e confira a oferta no Mercado Livre.
+</p>
+</div>
+
+</div>
+</section>
+
 
 <main>
 
-<!-- DESTAQUES -->
+<!-- CATEGORIAS -->
 
-<section id="destaques">
+<section class="section" id="categorias">
 <div class="container">
 
-<h2>🔥 Pra você</h2>
+<h2>Encontre o que você procura</h2>
 
-<div class="produtos">
+<p class="section-intro">
+Escolha uma categoria e confira os achadinhos selecionados.
+</p>
 
-<article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85" alt="Cobertor Manta Casal Microfibra">
+<div class="categories">
+
+<a class="category moda" href="#moda">
+<div class="category-content">
+<h3>👗 Moda</h3>
+<p>Moda feminina, masculina, infantil e bebês.</p>
 </div>
-<h3>Cobertor Manta Casal Microfibra</h3>
-<p>Rosa claro, macio e quentinho.</p>
-<strong>R$ 29,98</strong>
-<span>🔥 Ganho: 42%</span>
-<a href="https://meli.la/2W2oA5Y" target="_blank" rel="nofollow sponsored">Ver oferta</a>
-</article>
+</a>
 
-<article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="Camisa Térmica Agro UV">
+<a class="category tecnologia" href="#tecnologia">
+<div class="category-content">
+<h3>💻 Tecnologia</h3>
+<p>Notebooks, smartphones, celulares, smartwatches e acessórios.</p>
 </div>
-<h3>Camisa Térmica Agro UV</h3>
-<p>Proteção solar para atividades ao ar livre.</p>
-<strong>R$ 65,96</strong>
-<span>🔥 Ganho: 28%</span>
-<a href="https://meli.la/2SiapQj" target="_blank" rel="nofollow sponsored">Ver oferta</a>
-</article>
+</a>
 
-<article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=85" alt="Saída de Maternidade Rosa Menina Encanto">
+<a class="category beauty" href="#cuidado-feminino">
+<div class="category-content">
+<h3>💄 Cuidado Feminino</h3>
+<p>Cabelo, maquiagem, hidratantes e cuidados para o corpo.</p>
 </div>
-<h3>Saída de Maternidade Rosa Menina Encanto</h3>
-<p>Conjunto delicado para bebê.</p>
-<strong>R$ 118,95</strong>
-<span>🔥 Ganho: 27%</span>
-<a href="https://meli.la/2kBWMHW" target="_blank" rel="nofollow sponsored">Ver oferta</a>
-</article>
+</a>
 
-<article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="Kit 5 Camisetas Térmicas UV50+">
+<a class="category casa" href="#artigos-casa">
+<div class="category-content">
+<h3>🏠 Artigos de Casa</h3>
+<p>Produtos úteis para sua casa.</p>
 </div>
-<h3>Kit 5 Camisetas Térmicas UV50+</h3>
-<p>Dry Fit com proteção solar.</p>
-<strong>R$ 113,81</strong>
-<span>🔥 Ganho: 26%</span>
-<a href="https://meli.la/2L9cXBT" target="_blank" rel="nofollow sponsored">Ver oferta</a>
-</article>
+</a>
+
+<a class="category cama" href="#cama-mesa-banho">
+<div class="category-content">
+<h3>🛏️ Cama, Mesa e Banho</h3>
+<p>Produtos para deixar sua casa mais confortável.</p>
+</div>
+</a>
+
+<a class="category tv" href="#televisores">
+<div class="category-content">
+<h3>📺 Televisores</h3>
+<p>TVs, acessórios e itens para entretenimento.</p>
+</div>
+</a>
 
 </div>
 </div>
@@ -114,218 +450,201 @@
 
 <!-- MODA -->
 
-<section id="moda">
+<section class="section product-section" id="moda">
 <div class="container">
 
 <h2>👗 Moda</h2>
 
+<p class="section-intro">
+Moda feminina, masculina, infantil e para bebês.
+</p>
+
+
+<div class="subcategory">
 <h3>Moda Feminina</h3>
+</div>
 
-<div class="produtos">
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="Conjunto Segunda Pele Térmica Flanelado">
-</div>
-<h3>Conjunto Segunda Pele Térmica Flanelado</h3>
-<p>Frio intenso, cor preta.</p>
-<strong>R$ 50,34</strong>
-<span>🔥 Ganho: 23%</span>
-<a href="https://meli.la/2Qczdkr" target="_blank" rel="nofollow sponsored">Ver oferta</a>
-</article>
-
-</div>
-
-<h3>Moda Masculina</h3>
-
-<div class="produtos">
-
-<article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=900&q=85" alt="Kit de Frio Touca Gorro Luva Cachecol Meia">
-</div>
-<h3>Kit de Frio Touca Gorro Luva Cachecol Meia Térmica</h3>
+<h4>Conjunto Segunda Pele Térmica Flanelado Frio Intenso</h4>
 <p>Conjunto térmico para os dias frios.</p>
-<strong>R$ 19,00</strong>
-<span>🔥 Ganho: 20%</span>
-<a href="https://meli.la/2Dis9PU" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 50,34</strong>
+<a class="offer" href="https://meli.la/2Qczdkr" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
 
+
+<div class="subcategory">
+<h3>Moda Masculina</h3>
+</div>
+
+<div class="products">
+
+<article class="product">
+<h4>Camisa Térmica Agro UV</h4>
+<p>Proteção solar para atividades ao ar livre.</p>
+<strong class="price">R$ 65,96</strong>
+<a class="offer" href="https://meli.la/2SiapQj" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+</article>
+
+</div>
+
+
+<div class="subcategory">
 <h3>Moda Infantil e Bebês</h3>
+</div>
 
-<div class="produtos">
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=85" alt="Kit 6 Peças Conjunto Térmico">
-</div>
-<h3>Kit 6 Peças Conjunto Térmico</h3>
-<p>3 bodys + 3 calças peluciadas para o frio.</p>
-<strong>R$ 74,31</strong>
-<span>🔥 Ganho: 20%</span>
-<a href="https://meli.la/197Psow" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Kit 6 Peças Conjunto Térmico — 3 Bodys + 3 Calças</h4>
+<p>Conjunto peluciado para o frio.</p>
+<strong class="price">R$ 74,31</strong>
+<a class="offer" href="https://meli.la/197Psow" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=85" alt="Saída de Maternidade Kit Menino">
-</div>
-<h3>Saída de Maternidade Kit Menino 5 Peças</h3>
-<p>Em algodão, delicado e confortável.</p>
-<strong>R$ 71,15</strong>
-<span>🔥 Ganho: 20%</span>
-<a href="https://meli.la/2sKCFTP" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Saída de Maternidade Rosa Menina Encanto</h4>
+<p>Conjunto delicado para bebê.</p>
+<strong class="price">R$ 118,95</strong>
+<a class="offer" href="https://meli.la/2kBWMHW" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=85" alt="Kit Praia Térmica Bebê">
-</div>
-<h3>Kit Praia Térmica Bebê UV50</h3>
-<p>Com chapéu e óculos, proteção UV50.</p>
-<strong>R$ 67,56</strong>
-<span>🔥 Ganho: 20%</span>
-<a href="#" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Saída de Maternidade Kit Menino — 5 Peças</h4>
+<p>Conjunto em algodão.</p>
+<strong class="price">R$ 71,15</strong>
+<a class="offer" href="https://meli.la/2sKCFTP" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=900&q=85" alt="Sunga e Blusa Térmica Infantil">
-</div>
-<h3>Sunga + Blusa Térmica Infantil UV</h3>
+<h4>Kit Praia Térmica Bebê UV50 + Chapéu e Óculos</h4>
 <p>Moda praia infantil com proteção UV.</p>
-<strong>R$ 64,98</strong>
-<span>🔥 Ganho: 12%</span>
-<a href="https://meli.la/1LepGds" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 67,56</strong>
+<a class="offer" href="#" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=85" alt="Kit Tênis Infantil Meninas">
-</div>
-<h3>Kit Tênis Infantil Meninas Escolar Casual + Óculos Relógio</h3>
-<p>Conjunto infantil para meninas.</p>
-<strong>R$ 47,99</strong>
-<span>🔥 Ganho: 22%</span>
-<a href="https://meli.la/1DxUmzJ" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Sunga + Blusa Térmica Infantil UV</h4>
+<p>Moda praia infantil.</p>
+<strong class="price">R$ 64,98</strong>
+<a class="offer" href="https://meli.la/1LepGds" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=85" alt="Kit 2 Tênis Calce Fácil Menino">
-</div>
-<h3>Kit 2 Tênis Calce Fácil Menino Infantil</h3>
+<h4>Kit Tênis Infantil Meninas Escolar + Óculos e Relógio</h4>
+<p>Kit infantil casual e escolar.</p>
+<strong class="price">R$ 47,99</strong>
+<a class="offer" href="https://meli.la/1DxUmzJ" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+</article>
+
+<article class="product">
+<h4>Kit 2 Tênis Calce Fácil Menino Infantil</h4>
 <p>Escolar, confortável e fácil de calçar.</p>
-<strong>R$ 58,10</strong>
-<span>🔥 Ganho: 20%</span>
-<a href="https://meli.la/1cLdMbX" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 58,10</strong>
+<a class="offer" href="https://meli.la/1cLdMbX" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=85" alt="Tênis Molekinha Infantil">
-</div>
-<h3>Tênis Molekinha Infantil Menina</h3>
+<h4>Tênis Molekinha Infantil Menina</h4>
 <p>Moda casual original.</p>
-<strong>R$ 92,52</strong>
-<span>🔥 Ganho: 21%</span>
-<a href="https://meli.la/1u3JZ7y" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 92,52</strong>
+<a class="offer" href="https://meli.la/1u3JZ7y" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
+
 </div>
 </section>
 
 
 <!-- TECNOLOGIA -->
 
-<section id="tecnologia">
+<section class="section product-section" id="tecnologia">
 <div class="container">
 
 <h2>💻 Tecnologia</h2>
 
+<p class="section-intro">
+Tecnologia para trabalho, estudo, comunicação e entretenimento.
+</p>
+
+
+<div class="subcategory">
 <h3>Notebooks</h3>
+</div>
 
-<div class="produtos">
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://media.falabella.com/falabellaPE/80025693_01/w%3D1500%2Ch%3D1500%2Cfit%3Dcover" alt="MacBook Neo 13">
-</div>
-<h3>MacBook Neo 13"</h3>
+<h4>MacBook Neo 13"</h4>
 <p>Chip A18 Pro, 256GB, prateado.</p>
-<strong>R$ 5.441,09</strong>
-<span>🔥 Ganho: 9%</span>
-<a href="https://meli.la/1N5pPdm" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 5.441,09</strong>
+<a class="offer" href="https://meli.la/1N5pPdm" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
 
+
+<div class="subcategory">
 <h3>Smartphones e Celulares</h3>
+</div>
 
-<div class="produtos">
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85" alt="Samsung Galaxy A16">
-</div>
-<h3>Samsung Galaxy A16 128GB</h3>
+<h4>Samsung Galaxy A16 128GB</h4>
 <p>4GB RAM, câmera 50MP, tela 6,7" e NFC.</p>
-<strong>R$ 999,00</strong>
-<span>🔥 Ganho: 13%</span>
-<a href="https://meli.la/21gZoLk" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 999,00</strong>
+<a class="offer" href="https://meli.la/21gZoLk" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85" alt="POCO X8 Pro">
-</div>
-<h3>POCO X8 Pro 512GB</h3>
+<h4>POCO X8 Pro 512GB</h4>
 <p>12GB RAM, 5G e NFC.</p>
-<strong>R$ 2.889,99</strong>
-<span>🔥 Ganho: 10%</span>
-<a href="https://meli.la/2LUNz7F" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 2.889,99</strong>
+<a class="offer" href="https://meli.la/2LUNz7F" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=85" alt="Realme C73">
-</div>
-<h3>Realme C73 256GB</h3>
-<p>8GB RAM, 120Hz e bateria 6000mAh.</p>
-<strong>R$ 1.130,13</strong>
-<span>🔥 Ganho: 5%</span>
-<a href="https://meli.la/1Wprfwv" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Realme C73 256GB</h4>
+<p>8GB RAM, 120Hz e bateria de 6000mAh.</p>
+<strong class="price">R$ 1.130,13</strong>
+<a class="offer" href="https://meli.la/1Wprfwv" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
 
+
+<div class="subcategory">
+<h3>Smartwatches</h3>
+</div>
+
+<div class="products">
+<p>Novos achadinhos serão adicionados aqui.</p>
+</div>
+
+
+<div class="subcategory">
 <h3>Acessórios de Computação</h3>
+</div>
 
-<div class="produtos">
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=85" alt="Teclado Multilaser USB">
-</div>
-<h3>Teclado Multilaser USB</h3>
-<p>Teclado numérico e resistente a respingos.</p>
-<strong>R$ 25,20</strong>
-<span>🔥 Ganho: 5%</span>
-<a href="https://meli.la/2bv2T2F" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Kit 3 Cases HD/SSD USB 3.0</h4>
+<p>Para HD/SSD SATA 2,5".</p>
+<strong class="price">R$ 41,99</strong>
+<a class="offer" href="https://meli.la/2ptgHTu" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://down-br.img.susercontent.com/file/br-11134207-820lj-mov8mtpe18n995" alt="Kit 3 Case HD SSD">
-</div>
-<h3>Kit 3 Case HD/SSD USB 3.0</h3>
-<p>Para HD/SSD SATA 2,5".</p>
-<strong>R$ 41,99</strong>
-<span>🔥 Ganho: 9%</span>
-<a href="https://meli.la/2ptgHTu" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Teclado Multilaser USB</h4>
+<p>Teclado numérico resistente a respingos.</p>
+<strong class="price">R$ 25,20</strong>
+<a class="offer" href="https://meli.la/2bv2T2F" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
@@ -336,36 +655,42 @@
 
 <!-- CUIDADO FEMININO -->
 
-<section id="cuidado-feminino">
+<section class="section product-section" id="cuidado-feminino">
 <div class="container">
 
 <h2>💄 Cuidado Feminino</h2>
 
+<p class="section-intro">
+Produtos para cabelo, maquiagem, hidratação e cuidados com o corpo.
+</p>
+
+<div class="subcategory">
 <h3>Cabelo</h3>
-
-<div class="produtos">
-<p>Produtos de cabelo selecionados serão adicionados aqui.</p>
 </div>
 
+<div class="products">
+<p>Novos achadinhos serão adicionados aqui.</p>
+</div>
+
+<div class="subcategory">
 <h3>Maquiagem</h3>
-
-<div class="produtos">
-<p>Maquiagens selecionadas serão adicionadas aqui.</p>
 </div>
 
-<h3>Hidratantes e Corpo</h3>
+<div class="products">
+<p>Novos achadinhos serão adicionados aqui.</p>
+</div>
 
-<div class="produtos">
+<div class="subcategory">
+<h3>Hidratantes e Corpo</h3>
+</div>
+
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=900&q=85" alt="CeraVe Hidratante">
-</div>
-<h3>CeraVe Hidratante com 3 Ceramidas</h3>
+<h4>CeraVe Hidratante com 3 Ceramidas</h4>
 <p>Para pele seca e extrasseca.</p>
-<strong>R$ 31,36</strong>
-<span>🔥 Ganho: 16%</span>
-<a href="https://meli.la/2Xf3NVF" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 31,36</strong>
+<a class="offer" href="https://meli.la/2Xf3NVF" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
@@ -376,55 +701,43 @@
 
 <!-- ARTIGOS DE CASA -->
 
-<section id="casa">
+<section class="section product-section" id="artigos-casa">
 <div class="container">
 
 <h2>🏠 Artigos de Casa</h2>
 
-<div class="produtos">
+<p class="section-intro">
+Produtos úteis para facilitar o dia a dia.
+</p>
+
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=900&q=85" alt="Selante Silicone Cibra">
-</div>
-<h3>Kit 6 PU40 Cibra Selante Silicone 400g Branco</h3>
-<p>Cola e veda tudo. Cor branca.</p>
-<strong>R$ 64,90</strong>
-<span>🔥 Ganho: 22%</span>
-<a href="https://meli.la/24K1tyu" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<h4>Kit 6 PU40 Cibra Selante Silicone 400g Branco</h4>
+<p>Cola e veda tudo.</p>
+<strong class="price">R$ 64,90</strong>
+<a class="offer" href="https://meli.la/24K1tyu" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&w=900&q=85" alt="Tapete Sala Quarto">
-</div>
-<h3>Tapete Sala/Quarto 300x200</h3>
+<h4>Tapete Sala/Quarto 300x200</h4>
 <p>Algodão e antiderrapante.</p>
-<strong>R$ 161,50</strong>
-<span>🔥 Ganho: 22%</span>
-<a href="https://meli.la/2upPewi" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 161,50</strong>
+<a class="offer" href="https://meli.la/2upPewi" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=900&q=85" alt="Hastes Flexíveis de Bambu">
-</div>
-<h3>Kit 6 Potes Hastes Flexíveis de Bambu</h3>
-<p>612 unidades.</p>
-<strong>R$ 39,99</strong>
-<span>🔥 Ganho: 24%</span>
-<a href="https://meli.la/1SQ11gP" target="_blank" rel="nofollow sponsored">Ver oferta</a>
-</article>
-
-<article class="product">
-<div class="product-img">
-<img src="https://d5gag3xtge2og.cloudfront.net/producao/34898776/G/51yman1kfl._ac_sx679_.jpg" alt="Umidificador G-Tech">
-</div>
-<h3>Kit 3 Umidificadores G-Tech</h3>
+<h4>Kit 3 Umidificadores G-Tech</h4>
 <p>Umidificador ultrassônico.</p>
-<strong>R$ 477,00</strong>
-<span>🔥 Ganho: 22%</span>
-<a href="https://meli.la/2voSSbG" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 477,00</strong>
+<a class="offer" href="https://meli.la/2voSSbG" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+</article>
+
+<article class="product">
+<h4>Kit 6 Potes Hastes Flexíveis de Bambu</h4>
+<p>612 unidades.</p>
+<strong class="price">R$ 39,99</strong>
+<a class="offer" href="https://meli.la/1SQ11gP" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
@@ -434,22 +747,29 @@
 
 <!-- CAMA MESA BANHO -->
 
-<section id="cama-mesa-banho">
+<section class="section product-section" id="cama-mesa-banho">
 <div class="container">
 
 <h2>🛏️ Cama, Mesa e Banho</h2>
 
-<div class="produtos">
+<p class="section-intro">
+Produtos para deixar sua casa mais confortável e organizada.
+</p>
+
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=85" alt="Manta Flannel Solteiro">
-</div>
-<h3>Manta Flannel Solteiro</h3>
+<h4>Manta Flannel Solteiro</h4>
 <p>2,20m x 1,50m.</p>
-<strong>R$ 39,90</strong>
-<span>🔥 Ganho: 17%</span>
-<a href="https://meli.la/1Z1YEkk" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 39,90</strong>
+<a class="offer" href="https://meli.la/1Z1YEkk" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+</article>
+
+<article class="product">
+<h4>Cobertor Manta Casal Microfibra</h4>
+<p>Rosa claro, macio e quentinho.</p>
+<strong class="price">R$ 29,98</strong>
+<a class="offer" href="https://meli.la/2W2oA5Y" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
@@ -459,44 +779,36 @@
 
 <!-- TELEVISORES -->
 
-<section id="televisores">
+<section class="section product-section" id="televisores">
 <div class="container">
 
 <h2>📺 Televisores</h2>
 
-<div class="produtos">
+<p class="section-intro">
+Acessórios e produtos para sua experiência de entretenimento.
+</p>
+
+<div class="products">
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=900&q=85" alt="Cabo de Energia Universal para TV">
-</div>
-<h3>Cabo de Energia Universal para TV</h3>
+<h4>Cabo de Energia Universal para TV</h4>
 <p>Compatível com Samsung, LG, Philco, TCL e outros.</p>
-<strong>R$ 17,91</strong>
-<span>🔥 Ganho: 15%</span>
-<a href="https://meli.la/1TrLa9v" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 17,91</strong>
+<a class="offer" href="https://meli.la/1TrLa9v" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=900&q=85" alt="Tela de Projeção 150">
-</div>
-<h3>Tela de Projeção 150"</h3>
+<h4>Tela de Projeção 150"</h4>
 <p>Imagem nítida para cinema em casa.</p>
-<strong>R$ 74,99</strong>
-<span>🔥 Ganho: 17%</span>
-<a href="https://meli.la/2FS92eo" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 74,99</strong>
+<a class="offer" href="https://meli.la/2FS92eo" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 <article class="product">
-<div class="product-img">
-<img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=900&q=85" alt="Tela de Projeção HD 4K">
-</div>
-<h3>Tela de Projeção 150" HD 4K</h3>
+<h4>Tela de Projeção 150" HD 4K</h4>
 <p>Lona com ilhós para projetor.</p>
-<strong>R$ 116,92</strong>
-<span>🔥 Ganho: 13%</span>
-<a href="https://meli.la/1QJroxx" target="_blank" rel="nofollow sponsored">Ver oferta</a>
+<strong class="price">R$ 116,92</strong>
+<a class="offer" href="https://meli.la/1QJroxx" target="_blank" rel="nofollow sponsored">Ver oferta</a>
 </article>
 
 </div>
@@ -505,10 +817,16 @@
 
 </main>
 
+
 <footer>
 <div class="container">
-<p>Jeane Indica © 2026</p>
-<p>Links de ofertas podem gerar comissão para o site.</p>
+
+<p><strong>🛍️ Jeane Indica © 2026</strong></p>
+
+<p>
+Links de ofertas podem gerar comissão para o site.
+</p>
+
 </div>
 </footer>
 
